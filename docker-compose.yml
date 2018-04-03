@@ -1,0 +1,64 @@
+version: '2'
+
+services:
+
+  deluge:
+    image: "linuxserver/deluge"
+    container_name: deluge
+    ports:
+      - 8112:8112
+      - 51413:51413
+    networks:
+      - media
+    environment:
+      - PGID=0
+      - PUID=0
+    volumes:
+      - ./core.conf.new:/config/core.conf
+      - ~/Desktop/torrents/deluge/downloads:/root/Downloads
+    restart: always
+
+  sonarr:
+    build: sonarr
+    container_name: sonarr
+    ports:
+      - 8989:8989
+    networks:
+      - media
+    environment:
+      - PGID=0
+      - PUID=0
+    # volumes:
+    #   - ~/Desktop/torrents/sonarr/config:/config/
+    #   - ./sonarr/config/nzbdrone.db:/config/nzbdrone.db
+
+  radarr:
+    build: radarr
+    container_name: radarr
+    ports:
+      - 7878:7878
+    networks:
+      - media
+    environment:
+      - PGID=0
+      - PUID=0
+    # volumes:
+    #   - ~/Desktop/torrents/radarr/config:/config/
+      # - ./sonarr/config/nzbdrone.db:/config/nzbdrone.db
+
+  organizr:
+    build: organizr
+    container_name: organizr
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - media
+    environment:
+      - PGID=1001
+      - PUID=1001
+    restart: always
+
+networks:
+  media:
+    driver: bridge

@@ -1,0 +1,21 @@
+2017-12-02 21:24:14 - INFO    :: MainThread : Checking to see if the database has all tables....
+2017-12-02 21:24:14 - DEBUG   :: MainThread : User "Local" does not exist. Adding user.
+2017-12-02 21:24:14 - DEBUG   :: MainThread : Generating UUID...
+2017-12-02 21:24:14 - INFO    :: MainThread : PlexPy Config :: Writing configuration to file
+2017-12-02 21:24:14 - ERROR   :: MainThread : PlexPy Config :: Error writing configuration file: [Errno 21] Is a directory: '/config/config.ini'
+2017-12-02 21:24:14 - DEBUG   :: MainThread : Trying to execute: "git rev-parse HEAD" with shell in /app/plexpy
+2017-12-02 21:24:14 - DEBUG   :: MainThread : Git output: cfd30996264b7e9fe4ef87f02d1cc52d1ae8bfca
+2017-12-02 21:24:14 - DEBUG   :: MainThread : Trying to execute: "git rev-parse --abbrev-ref HEAD" with shell in /app/plexpy
+2017-12-02 21:24:14 - DEBUG   :: MainThread : Git output: master
+2017-12-02 21:24:14 - INFO    :: MainThread : Retrieving latest version information from GitHub
+2017-12-02 21:24:14 - DEBUG   :: MainThread : Requesting URL via GET method: https://api.github.com/repos/JonnyWong16/plexpy/commits/master
+2017-12-02 21:24:15 - DEBUG   :: MainThread : Latest version is cfd30996264b7e9fe4ef87f02d1cc52d1ae8bfca
+2017-12-02 21:24:15 - INFO    :: MainThread : PlexPy is up to date
+2017-12-02 21:24:15 - INFO    :: MainThread : Scheduled background task: Check GitHub for updates
+2017-12-02 21:24:15 - INFO    :: MainThread : Scheduled background task: Backup PlexPy database
+2017-12-02 21:24:15 - INFO    :: MainThread : Scheduled background task: Backup PlexPy config
+2017-12-02 21:24:15 - INFO    :: MainThread : PlexPy WebStart :: Starting PlexPy web server on http://0.0.0.0:8181/
+2017-12-02 21:25:19 - INFO    :: CP Server Thread-10 : PlexPy PlexTV :: Fetching a new Plex.tv token for PlexPy.
+2017-12-02 21:25:20 - WARNING :: CP Server Thread-10 : Failed to access uri endpoint /users/sign_in.xml. Status code 401
+2017-12-02 21:34:46 - INFO    :: CP Server Thread-11 : PlexPy PlexTV :: Fetching a new Plex.tv token for PlexPy.
+2017-12-02 21:34:47 - WARNING :: CP Server Thread-11 : Failed to access uri endpoint /users/sign_in.xml. Status code 401
